@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CBSE Class 10 competency-based practice, quizzes, mock tests and worksheets.">
+  <title>BoardReady — Class 10 Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="BoardReady home"><span class="brand-mark">B</span><span>BoardReady <small>CLASS 10</small></span></a>
+    <nav><a href="#practice">Practice</a><a href="#mock">Mock test</a><a href="#progress">Progress</a></nav>
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle colour theme" title="Toggle theme">◐</button>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">CBSE • COMPETENCY-BASED LEARNING</p>
+        <h1>Practise smarter.<br><span>Understand deeper.</span></h1>
+        <p class="hero-sub">Application-based questions, case studies and board-style practice — organised by chapter.</p>
+        <div class="hero-actions"><a class="btn primary" href="#practice">Start practising <span>→</span></a><button id="worksheetTop" class="btn secondary">Make a worksheet</button></div>
+        <div class="hero-proof"><span>✓ Instant feedback</span><span>✓ Track your progress</span><span>✓ Review mistakes</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-card card-top"><span class="mini-icon purple">✦</span><div><b>Think, don't memorise</b><small>Competency practice</small></div></div>
+        <div class="study-sheet"><div class="sheet-head"><span>YOUR PRACTICE</span><span class="dots">•••</span></div><div class="sheet-title">Today's focus</div><div class="sheet-line w-90"></div><div class="sheet-line w-70"></div><div class="sheet-question"><span>01</span><div><b>Apply the concept</b><small>Case-based question</small></div><span class="check">✓</span></div><div class="sheet-question"><span>02</span><div><b>Explain your reasoning</b><small>2 marks · Medium</small></div></div><div class="sheet-progress"><span></span></div><small class="progress-label">KEEP YOUR STREAK GOING</small></div>
+        <div class="floating-card card-bottom"><span class="mini-icon green">↗</span><div><b>Progress adds up</b><small>One question at a time</small></div></div>
+      </div>
+    </section>
+    <section class="stats-grid" id="progress">
+      <article class="stat-card"><span class="stat-icon blue">◎</span><div><p>Questions attempted</p><strong id="statAttempted">0</strong><small>Keep building your practice</small></div></article>
+      <article class="stat-card"><span class="stat-icon green">✓</span><div><p>Accuracy</p><strong id="statAccuracy">—</strong><small>Based on answered questions</small></div></article>
+      <article class="stat-card"><span class="stat-icon orange">↻</span><div><p>To review</p><strong id="statMistakes">0</strong><small>Saved in your mistake notebook</small></div></article>
+      <article class="stat-card"><span class="stat-icon purple">▤</span><div><p>Question bank</p><strong id="statTotal">0</strong><small>Questions currently loaded</small></div></article>
+    </section>
+    <section class="section" id="practice">
+      <div class="section-heading"><div><p class="eyebrow">YOUR STUDY SPACE</p><h2>Question practice</h2><p class="muted">Choose a subject and focus on one chapter at a time.</p></div><button class="btn secondary" id="randomBtn">↗ Random question</button></div>
+      <div class="filter-panel">
+        <label class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search questions, topics or keywords…"></label>
+        <div class="filter-row">
+          <label>Subject<select id="subjectFilter"><option value="">All subjects</option></select></label>
+          <label>Chapter<select id="chapterFilter"><option value="">All chapters</option></select></label>
+          <label>Question type<select id="typeFilter"><option value="">All types</option><option value="application">Application-based</option><option value="case-based">Case-based</option><option value="reasoning">Reasoning</option></select></label>
+          <label>Difficulty<select id="difficultyFilter"><option value="">All levels</option><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option></select></label>
+        </div>
+      </div>
+      <div class="practice-layout">
+        <div class="question-list-wrap"><div class="list-meta"><span id="resultCount">Loading questions…</span><select id="sortFilter" aria-label="Sort questions"><option value="default">Recommended</option><option value="easy">Easiest first</option><option value="hard">Hardest first</option></select></div><div id="questionList" class="question-list"></div><div id="emptyState" class="empty-state hidden"><span>⌕</span><h3>No questions found</h3><p>Try changing your filters or search term.</p><button id="clearFilters" class="btn secondary">Clear filters</button></div></div>
+        <aside class="side-panel"><div class="side-head"><span class="side-symbol">✎</span><div><h3>Quick practice</h3><p>Build confidence in short sessions.</p></div></div><button class="side-action" id="startSession"><span class="action-icon blue">▶</span><span><b>Practice session</b><small>5 questions · instant feedback</small></span><span>→</span></button><button class="side-action" id="startMock"><span class="action-icon purple">◷</span><span><b>Mock test</b><small>10 minutes · timed</small></span><span>→</span></button><button class="side-action" id="makeWorksheet"><span class="action-icon orange">▤</span><span><b>Printable worksheet</b><small>Choose a custom set</small></span><span>→</span></button><div class="mistake-mini"><div><b>Mistake notebook</b><span class="count-pill" id="mistakePill">0</span></div><p>Revisit the questions you got wrong.</p><button id="reviewMistakes" class="text-btn">Review saved mistakes →</button></div><div class="tip-box"><span>✦</span><div><b>Study tip</b><p>After answering, explain why the other options are incorrect. That's how you strengthen application skills.</p></div></div></aside>
+      </div>
+    </section>
+    <section class="section mock-section" id="mock">
+      <div class="section-heading"><div><p class="eyebrow">EXAM SIMULATION</p><h2>Ready for a mock test?</h2><p class="muted">Practise under timed conditions, then review every answer.</p></div></div>
+      <div class="mock-banner"><div class="mock-copy"><span class="mock-tag">TIMED PRACTICE</span><h3>Test your understanding.</h3><p>Questions are selected from your current question bank. Your results are saved in this browser.</p><div class="mock-details"><span>◷ 10 minutes</span><span>▤ Up to 10 questions</span><span>✓ Review answers</span></div><button class="btn primary" id="mockBannerBtn">Start mock test <span>→</span></button></div><div class="mock-visual" aria-hidden="true"><div class="circle-graphic"><span>10</span><small>QUESTIONS</small><div class="circle-check">✓</div></div></div></div>
+    </section>
+    <section class="footer-cta"><div><p class="eyebrow">SMALL STEPS. REAL PROGRESS.</p><h2>Your next question is a step forward.</h2><p class="muted">Practise consistently, learn from mistakes, and keep improving.</p></div><a class="btn primary" href="#practice">Continue practising →</a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">B</span><span>BoardReady</span></a><span>Independent practice project · Not affiliated with CBSE</span><a href="README.md">About this project</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modalRoot"></div>
+  <script src="app.js"></script>
+</body>
+</html>
